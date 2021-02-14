@@ -13,9 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{63706543-A758-4158-8B8F-FE6091C5DE5C}</ProjectGuid>
     <Keyword>QtVS_v303</Keyword>
-
-    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')"
-      >$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -27,11 +25,8 @@
     <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <Target Name="QtMsBuildNotFound"
-    BeforeTargets="CustomBuild;ClCompile"
-    Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
-    <Message Importance="High"
-      Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
   </Target>
   <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="Shared" />
@@ -89,12 +84,76 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="Weather.qrc"/>
-    <QtUic Include="Weather.ui"/>
-    <QtMoc Include="Weather.h"/>
-    <ClCompile Include="Weather.cpp"/>
-    <ClCompile Include="main.cpp"/>
-
+    <QtRcc Include="Weather.qrc" />
+    <QtUic Include="Weather.ui" />
+    <QtMoc Include="Weather.h" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="conf.ini" />
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Refresh.png" />
+    <Image Include="WeatherIcons\100.png" />
+    <Image Include="WeatherIcons\101.png" />
+    <Image Include="WeatherIcons\102.png" />
+    <Image Include="WeatherIcons\103.png" />
+    <Image Include="WeatherIcons\104.png" />
+    <Image Include="WeatherIcons\17.png" />
+    <Image Include="WeatherIcons\200.png" />
+    <Image Include="WeatherIcons\202.png" />
+    <Image Include="WeatherIcons\203.png" />
+    <Image Include="WeatherIcons\204.png" />
+    <Image Include="WeatherIcons\212.png" />
+    <Image Include="WeatherIcons\23.png" />
+    <Image Include="WeatherIcons\27.png" />
+    <Image Include="WeatherIcons\29.png" />
+    <Image Include="WeatherIcons\300.png" />
+    <Image Include="WeatherIcons\302.png" />
+    <Image Include="WeatherIcons\303.png" />
+    <Image Include="WeatherIcons\305.png" />
+    <Image Include="WeatherIcons\306.png" />
+    <Image Include="WeatherIcons\307.png" />
+    <Image Include="WeatherIcons\308.png" />
+    <Image Include="WeatherIcons\309.png" />
+    <Image Include="WeatherIcons\31.png" />
+    <Image Include="WeatherIcons\310.png" />
+    <Image Include="WeatherIcons\311.png" />
+    <Image Include="WeatherIcons\312.png" />
+    <Image Include="WeatherIcons\314.png" />
+    <Image Include="WeatherIcons\315.png" />
+    <Image Include="WeatherIcons\316.png" />
+    <Image Include="WeatherIcons\317.png" />
+    <Image Include="WeatherIcons\318.png" />
+    <Image Include="WeatherIcons\33.png" />
+    <Image Include="WeatherIcons\399.png" />
+    <Image Include="WeatherIcons\400.png" />
+    <Image Include="WeatherIcons\401.png" />
+    <Image Include="WeatherIcons\402.png" />
+    <Image Include="WeatherIcons\403.png" />
+    <Image Include="WeatherIcons\404.png" />
+    <Image Include="WeatherIcons\405.png" />
+    <Image Include="WeatherIcons\406.png" />
+    <Image Include="WeatherIcons\407.png" />
+    <Image Include="WeatherIcons\408.png" />
+    <Image Include="WeatherIcons\409.png" />
+    <Image Include="WeatherIcons\410.png" />
+    <Image Include="WeatherIcons\43.png" />
+    <Image Include="WeatherIcons\45.png" />
+    <Image Include="WeatherIcons\46.png" />
+    <Image Include="WeatherIcons\47.png" />
+    <Image Include="WeatherIcons\499.png" />
+    <Image Include="WeatherIcons\501.png" />
+    <Image Include="WeatherIcons\502.png" />
+    <Image Include="WeatherIcons\503.png" />
+    <Image Include="WeatherIcons\509.png" />
+    <Image Include="WeatherIcons\511.png" />
+    <Image Include="WeatherIcons\512.png" />
+    <Image Include="WeatherIcons\513.png" />
+    <Image Include="WeatherIcons\515.png" />
+    <Image Include="WeatherIcons\900.png" />
+    <Image Include="WeatherIcons\901.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

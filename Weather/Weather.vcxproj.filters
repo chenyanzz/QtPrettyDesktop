@@ -33,17 +33,196 @@
     <QtMoc Include="Weather.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="Weather.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ResourceCompile Include="$pro_name$.rc">
-    </ResourceCompile>
-    <None Include="$pro_name$.ico">
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Refresh.png">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="$pro_name$.def">
+    </Image>
+    <Image Include="WeatherIcons\17.png">
       <Filter>Resource Files</Filter>
-    </None>
-
+    </Image>
+    <Image Include="WeatherIcons\23.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\27.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\29.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\31.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\33.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\43.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\45.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\46.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\47.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\100.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\101.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\102.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\103.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\104.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\200.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\202.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\203.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\204.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\212.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\300.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\302.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\303.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\305.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\306.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\307.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\308.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\309.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\310.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\311.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\312.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\314.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\315.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\316.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\317.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\318.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\399.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\400.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\401.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\402.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\403.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\404.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\405.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\406.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\407.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\408.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\409.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\410.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\499.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\501.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\502.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\503.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\509.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\511.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\512.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\513.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\515.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\900.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="WeatherIcons\901.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="conf.ini" />
+    <None Include="readme.md" />
   </ItemGroup>
 </Project>
