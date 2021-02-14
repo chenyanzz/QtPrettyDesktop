@@ -47,9 +47,9 @@ Just to replace the icons in "WeatherIcons",with the code defined [in this site]
 
 ### Note When you are compiling
 
-Since Qt needs OpenSSl to use ```https://```
+Since Qt needs OpenSSL to use ```https://```
 
-Be sure to move the Libraries of ***the correct version*** of OpenSSl to in the same folder of the exported ".exe".
+Be sure to move the Libraries of ***the correct version*** of OpenSSL to the same folder of the exported ".exe".
 
 Which are: ```libeay32.dll``` and ```ssleay32.dll```
 

@@ -17,6 +17,9 @@
 #include "qfile.h"
 #include "qdir.h"
 #include "qtimer.h"
+#include "qimage.h"
+#include "qpixmap.h"
+#include "qmutex.h"
 
 class Weather : public QWidget
 {
@@ -27,6 +30,7 @@ protected:
 	QSettings* conf;
 	QNetworkAccessManager* networkAccessMenager;
 	QTimer* timer;
+	QMutex* mutex;
 
 	const QString defaultConfPath = "./conf.ini";
 	void readConf(QString path) {
@@ -45,10 +49,13 @@ protected:
 	bool setWeatherIcon(int id) {
 		QDir dir = QDir(defaultIconPath);
 		QString filename = QString("%1.png").arg(id);
-		if (!dir.exists(filename))
-			return false;
+		if (!dir.exists(filename)) return false;
+
+
 		QImage img = QImage(dir.filePath(filename));
-		ui.l_image->setPixmap(QPixmap::fromImage(img));
+		QPixmap pm = QPixmap::fromImage(img);
+		ui.l_image->setPixmap(pm.scaledToHeight(height()-10));
+		return true;
 	}
 
 public slots:
@@ -81,8 +88,11 @@ public slots:
 
 private slots:
 	void httpRequestFinished(QNetworkReply* reply) {
+
 		auto s = QString(reply->readAll());
-		if (s.isEmpty())return;
+		if (s.isEmpty()) {
+			return;
+		}
 
 		auto doc = QJsonDocument::fromJson(s.toUtf8());
 		auto root = doc.object();
@@ -94,6 +104,10 @@ private slots:
 
 		auto body = root["HeWeather6"].toArray()[0].toObject().toVariantMap();
 
+		if (!body.contains("basic")) {
+			QMessageBox::warning(this, "Web Request Error", "Cannot get data from the server. The return is as follows\n" + s);
+			return;
+		}
 
 		if (body.contains("now")) {
 			auto now = body["now"].toMap();
@@ -145,11 +159,14 @@ public:
 		timer = new QTimer(this);
 		timer->setSingleShot(false);
 		timer->setInterval(conf->value("refresh_secs", 1800).toInt()*1000l);
+		mutex = new QMutex();
 
 		//init signals
 		connect(networkAccessMenager, SIGNAL(finished(QNetworkReply*)), this, SLOT(httpRequestFinished(QNetworkReply*)));
 		connect(ui.b_refresh, SIGNAL(clicked()), this, SLOT(refresh()));
 		connect(timer, SIGNAL(timeout()), this, SLOT(refresh()));
+		connect(ui.b_exit, SIGNAL(clicked()),qApp, SLOT(quit()));
+
 
 		timer->start();
 		refresh();
