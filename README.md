@@ -1,7 +1,7 @@
 # Pretty Desktop Widgets for Windows
 A Beautiful Weather Widget only at the moment. :)
 
-Where you can have a view of 
+Where you can have a view of the temperature and icon of weather.
 
 ## Example View
 (look at the top-left)
@@ -34,7 +34,7 @@ refresh_secs=1800
 ```
 
 
-### Acquire the "api_key" for yourself
+### [VITAL] Acquire the "api_key" for yourself
 
 Just follow the steps: https://dev.qweather.com/docs/start/get-api-key/
 
