@@ -7,7 +7,7 @@ Where you can have a view of the temperature and icon of weather.
 (look at the top-left)
 ![](doc/DesktopWeather.jpg)
 
-## Pre-Compiled Excuteble
+## Pre-Compiled Excutable
 In ```./Weather/pre-build```.
 > BUT you need to Acquire the "api_key" for yourself (see below)
 
