@@ -5,10 +5,12 @@
 （@桌面左上角）
 ![](doc/DesktopWeather.jpg)
 
+<<<<<<< HEAD
 ## 预编译的exe
 [Weather-win64](https://github.com/chenyanzz/QtPrettyDesktop/releases/download/v0.1.1/Weather-win64.zip)
 
 > 但是需要自己注册、获取"api_key"（方法见下方）
+
 
 ## 使用方法
 
