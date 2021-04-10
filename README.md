@@ -1,68 +1,69 @@
-# Pretty Desktop Widgets for Windows
-A Beautiful Weather Widget only at the moment. :)
+# 基于Qt的Windows桌面美化插件
+现在只做了这个天气插件 :)
 
-Where you can have a view of the temperature and icon of weather.
-
-## Example View
-(look at the top-left)
+## 运行截图
+（@桌面左上角）
 ![](doc/DesktopWeather.jpg)
 
-## Pre-Compiled Excuteble
-In ```./Weather/pre-build```.
-> BUT you need to Acquire the "api_key" for yourself (see below)
+## 预编译的exe
+[Weather-win64](https://github.com/chenyanzz/QtPrettyDesktop/releases/download/v0.1.1/Weather-win64.zip)
 
-## Usage
+> 但是需要自己注册、获取"api_key"（方法见下方）
 
-### That "conf.ini"
+## 使用方法
+
+### 设定配置文件 "conf.ini"
+大部分采用默认即可，
 e.g.
 ```ini
-# window position
+# 插件的坐标
 x=0
 y=0
 
-# window size
+# 窗口大小
 width=180
 height=200
 
-# the settings of weather
-location_large=beijing      # like a province/county
-location_small=dongcheng    # like a district
+# 定位地点设置
+location_large=beijing      # 省市
+location_small=dongcheng    # 区
 
-api_key=xxxx-xxxx-xxxxx     # see below
+api_key=xxxx-xxxx-xxxxx     # 【就是要自己填这个】看下面
 
-refresh_secs=1800
+refresh_secs=1800 # 刷新间隔（秒）
 ```
 
 
-### [VITAL] Acquire the "api_key" for yourself
+###  【画重点！】 获取"api_key"
+1. [注册和风天气开发者](https://id.qweather.com/#/login?redirect=https%3A%2F%2Fconsole.qweather.com)
 
-Just follow the steps: https://dev.qweather.com/docs/start/get-api-key/
+2. [获取API-KEY步骤](https://dev.qweather.com/docs/start/get-api-key/)
 
-### Customize Weather Icons
-Just to replace the icons in "WeatherIcons",with the code defined [in this site](https://dev.qweather.com/docs/start/icons/).
+### 自定义天气图标
+替换 "WeatherIcons" 目录中的文件即可，文件名含义见[this site](https://dev.qweather.com/docs/start/icons/).
 
-(e.g., you can replace the files in folder ```WeatherIcons_set2/``` to folder ```WeatherIcons/```)
+(e.g., 你可以把 ```WeatherIcons_set2/``` 中内容覆盖到 ```WeatherIcons/``` 目录来换一种风格)
 
-> the filename must be ended by ".png"
+> 注意文件名应当是 【天气id】".png"
 
-### Note When you are compiling
+### 如果要编译源码
 
-Since Qt needs OpenSSL to use ```https://```
+由于 Qt 需要 OpenSSL 库才能使用协议 ```https://```
 
-Be sure to move the Libraries of ***the correct version*** of OpenSSL to the same folder of the exported ".exe".
+确保将 ***正确版本*** 的 OpenSSL 动态链接库拷贝到 ".exe" 同级目录.
 
-Which are: ```libeay32.dll``` and ```ssleay32.dll```
+对于我的版本，库文件是: ```libeay32.dll``` 和```ssleay32.dll```
 
-I've left the ```1.0.2j``` version of dlls in ```./lib/```
+我将 ```1.0.2j``` 的 dlls 保存在了 ```./lib/```
 
-For other QT versions, you can check the proper version by:
+对于其他Qt版本，可能使用不同版本的OPENSSL，你可以通过如下代码查询当前的Qt编译时使用的版本：
 
 ```c++
 qDebug()<<QSslSocket::sslLibraryBuildVersionString();
 ```
 
-## Referrences
-- [HeFeng Weather Web Service](https://dev.qweather.com/)
-- [HeFeng Weather Icons](https://github.com/qwd/WeatherIcon)
-- [Qt5](https://www.qt.io/) (Qt 5.10.1 for my dev, so it may be some errors if you are using another version)
-- [OpenSSL](https://www.openssl.org/) for ```https://``` requests 
+## 引用
+- [和风天气API](https://dev.qweather.com/)
+- [和风天气官方图标集](https://github.com/qwd/WeatherIcon)
+- [Qt5](https://www.qt.io/) (我用的是5.10.1，其他版本可能会有兼容性问题)
+- [OpenSSL](https://www.openssl.org/) 为适配```https://``` 请求
