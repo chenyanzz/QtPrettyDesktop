@@ -1,3 +1,4 @@
+for English version, @see [](./README-ENGLISH.md)
 # 基于Qt的Windows桌面美化插件
 现在只做了这个天气插件 :)
 
@@ -5,7 +6,6 @@
 （@桌面左上角）
 ![](doc/DesktopWeather.jpg)
 
-<<<<<<< HEAD
 ## 预编译的exe
 [Weather-win64](https://github.com/chenyanzz/QtPrettyDesktop/releases/download/v0.1.1/Weather-win64.zip)
 
